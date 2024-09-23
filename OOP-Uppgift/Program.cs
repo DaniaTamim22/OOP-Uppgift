@@ -5,7 +5,8 @@
         static void Main(string[] args)
         {
             Person person = new Person("Kalle","Testson",37,170,70);
-            Console.WriteLine(person.FName);
+            //Can't access private fields out of the class itself
+            //Console.WriteLine(person.fName); Not working
             Console.WriteLine(person.ToString());
         }
     }
