@@ -7,8 +7,23 @@ namespace OOP_Uppgift
         static void Main(string[] args)
         {
             // FirstPart();
-           // SecondPart();
+            // SecondPart();
+            //ThirdPart();
 
+        }
+
+        private static void ThirdPart()
+        {
+            List<UserError> userErrors = new List<UserError>();
+            userErrors.Add(new TextInputError());
+            userErrors.Add(new NumericInputError());
+            userErrors.Add(new TextInputError());
+            userErrors.Add(new NumericInputError());
+
+            foreach (var error in userErrors)
+            {
+                Console.WriteLine(error.UEMessage());
+            }
         }
 
         private static void SecondPart()
