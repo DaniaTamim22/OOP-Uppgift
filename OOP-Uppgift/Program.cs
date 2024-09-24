@@ -7,7 +7,7 @@ namespace OOP_Uppgift
         static void Main(string[] args)
         {
             // FirstPart();
-            SecondPart();
+           // SecondPart();
 
         }
 
