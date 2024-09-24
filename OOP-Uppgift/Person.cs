@@ -15,20 +15,69 @@ namespace OOP_Uppgift
         private int weight;
 
 
-        public string FName { get { return fName; } set { fName = value; } }
-        public string LName { get { return lName; } set { lName = value; } }
-        public int Age { get { return age; } set {     age = value; } }
+        public string FName
+        {
+            get { return fName; }
+            set
+            {
+                if (String.IsNullOrEmpty(value) || (value.Length < 2))
+                {
+                    throw new ArgumentException("First Name can't be empty or lower than 2 characters!!");
+                }
+                else if (value.Length > 10)
+                {
+                    throw new ArgumentException("First Name can't be more than 10 characters!!");
+                }
+                else
+                {
+                    fName = value;
+                }
+            }
+        }
+        public string LName
+        {
+            get { return lName; }
+            set
+            {
+
+                if (String.IsNullOrEmpty(value) || (value.Length < 3))
+                {
+                    throw new ArgumentException("Last Name can't be empty or lower than 3 characters!!");
+                }
+                else if (value.Length > 15)
+                {
+                    throw new ArgumentException("Last Name can't be more than 15 characters!!");
+                }
+                else
+                {
+                    lName = value;
+                }
+
+
+            }
+        }
+        public int Age
+        {
+            get { return age; }
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException("Age must be over 0 year !! ");
+                else
+                    age = value;
+            }
+        }
         public int Height { get { return height; } set { height = value; } }
         public int Weight { get { return weight; } set { weight = value; } }
 
 
         public Person(string fname, string lname, int age, int height, int weight)
         {
-            this.FName = fname;
-            this.LName = lname;
-            this.Age = age;
-            this.Height = height;
-            this.Weight = weight;
+            FName = fname;
+            LName = lname;
+            Age = age;
+            Height = height;
+            Weight = weight;
 
         }
 
