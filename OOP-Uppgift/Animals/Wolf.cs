@@ -8,8 +8,12 @@ namespace OOP_Uppgift.Animals
 {
     internal class Wolf : Animal
     {
-        public Wolf(string name, int weight, int age) : base(name, weight, age)
+        private string packName;
+
+        public string PackName {  get { return packName; } set { packName = value; } }
+        public Wolf(string name, int weight, int age, string packName) : base(name, weight, age)
         {
+            PackName = packName;
         }
 
         public override void DoSound()

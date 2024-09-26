@@ -8,8 +8,13 @@ namespace OOP_Uppgift.Animals
 {
     internal class Worm : Animal
     {
-        public Worm(string name, int weight, int age) : base(name, weight, age)
+        private bool isPoisnous;
+
+        public bool IsPoisnous { get => isPoisnous; set => isPoisnous = value; }
+
+        public Worm(string name, int weight, int age, bool isPoisnous) : base(name, weight, age)
         {
+            IsPoisnous = isPoisnous;
         }
 
         public override void DoSound()

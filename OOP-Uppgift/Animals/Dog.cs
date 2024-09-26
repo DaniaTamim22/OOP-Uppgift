@@ -8,8 +8,12 @@ namespace OOP_Uppgift.Animals
 {
     internal class Dog : Animal
     {
-        public Dog(string name, int weight, int age) : base(name, weight, age)
+        private string breed;
+
+        public string Breed { get { return breed; } set { breed = value; } }
+        public Dog(string name, int weight, int age, string breed) : base(name, weight, age)
         {
+            Breed = breed;
         }
 
         public override void DoSound()

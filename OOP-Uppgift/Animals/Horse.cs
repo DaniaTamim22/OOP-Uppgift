@@ -8,9 +8,14 @@ namespace OOP_Uppgift.Animals
 {
     internal class Horse : Animal
     {
+        private string horseColor;
+        public string HorseColor { get => horseColor; set => horseColor = value; }
         public Horse(string name, int weight, int age) : base(name, weight, age)
         {
+            HorseColor = HorseColor;
         }
+
+
 
         public override void DoSound()
         {
