@@ -8,27 +8,35 @@ C# Övningssamling - Inkapsling, arv och polymorfism
  Instansiera en person i Program.cs, kommer du direkt åt variablerna?
  Implementera validering i de skapade properties:
  ● Age kan bara tilldelas ett värde större än 0.
+
  ● FName är obligatorisk och får inte vara mindre än 2 tecken eller längre än 10
  tecken.
+ 
  ● LName är obligatorisk och får inte vara mindre än 3 tecken eller större än 15
  tecken.
+ 
  Kasta ett undantag av typen ArgumentException i varje property om dess
  validering inte fullföljs, undantaget ska innehålla ett beskrivande
  meddelande.
+ 
  Se till att hantera undantagen i Program-klassen med en try-catch block.
- 2. För att inkapsla Person-objekten ytterligare skall vi skapa klassen PersonHandler
+ 
+ 3. För att inkapsla Person-objekten ytterligare skall vi skapa klassen PersonHandler
 en klass vars syfte är att skapa och hantera dina Person-objekt.
+
  I PersonHandler-klassen skapa metoden:
  public void SetAge(Person pers, int age)
+ 
  Använd den inskickade personens Age property för att sätta personens age-attribut
  via SetAge-metoden. Istället för att enbart använda en property har vi nu
  abstraherat med två lager.
- 3. IPersonHandler, skriv en metod som skapar en person med angivna värden:
+ 
+ 5. IPersonHandler, skriv en metod som skapar en person med angivna värden:
  public Person CreatePerson(int age, string fname,
  string lname, double height, double weight)
- 4. Fortsätt skapa metoder i PersonHandler för att kunna hantera samtliga
+ 6. Fortsätt skapa metoder i PersonHandler för att kunna hantera samtliga
  operationer som man kan vilja göra med en Person.
-5. När denna klass är klar, kommentera bort er tidigare instans av Person från
+7. När denna klass är klar, kommentera bort er tidigare instans av Person från
  Program.cs, och instansiera istället en PersonHandler. Skapa därigenom några
  personer och testa era metoder.
  3.2) Polymorfism
