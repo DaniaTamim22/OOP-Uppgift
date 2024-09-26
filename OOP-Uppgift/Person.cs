@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_Uppgift
 {
-    internal class Person
+    public class Person
     {
         private string fName;
         private string lName;
@@ -14,7 +14,10 @@ namespace OOP_Uppgift
         private int height;
         private int weight;
 
-
+        public interface IPerson
+        {
+            public void Talk();
+        }
         public string FName
         {
             get { return fName; }

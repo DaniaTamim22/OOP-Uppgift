@@ -12,6 +12,8 @@ namespace OOP_Uppgift.Animals
         private int weight;
         private int age;
 
+        //F: Om alla djur behöver det nya attributet, vart skulle man lägga det då?
+        //S. Här i animal class då alla animals ärvar den
 
         public string Name
         {
