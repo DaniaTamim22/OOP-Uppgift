@@ -45,3 +45,50 @@ en klass vars syfte är att skapa och hantera dina Person-objekt.
  8. Skriv ut samtliga UserErrors UEMessage() genom enforeach loop.
  9. Skapa nu tre egna klasser med tre egna definitioner på UEMessage()
  10. Testa och se så det fungerar.
+
+ 11.  3.3) Arv
+ 1. Skapa  abstrakta klassen Animal
+ 2. Fyll klassen Animal med egenskaper (properties) som alla djur bör ha. Tex namn,
+ vikt, ålder.
+ 3. Skapa en abstrakt metod som heterDoSound().
+ 4. Lägg till en konstruktor.
+ 5. Skapa Subklasserna (ärver från Animal): Horse, Dog, Hedgehog, Worm och
+ Bird, Wolf.
+ 6. Ge dessa minst en unik egenskap var. Vilken egenskap det är är inte det viktiga här.
+ Exempel Worm: IsPoisonous, Hedgehog: NrOfSpikes , Bird: WingSpan  osv.
+ 7. Implementera så att DoSound() metoden skriver ut hurdjuret låter..
+ 8. Skapa nu följande tre klasser: Pelican, Flamingo ochSwan. Dessa ska ärva
+ från Bird.
+ 9. Ge dessa minst en unik egenskap var.
+ 10. Skapa gränssnittet (interface) IPerson med en metod deklaration Talk();
+11. Skapa klassen Wolfman som ärver från Wolf och implementerar IPerson
+ gränssnittet.
+ 12. Implementera Talk() som skriver ut vad Wolfman säger.
+ 13. F: Om vi under utvecklingen kommer fram till att samtliga fåglar behöver ett nytt
+ attribut, i vilken klass bör vi lägga det?
+ 14. F: Om alla djur behöver det nya attributet, vart skulle man lägga det då?
+ 3.4) Mer polymorfism
+ 1. Skapa metoden Stats() i klassenAnimal som har returtypen string.
+ Metoden ska kunnaoverridas i dess Subklasser.  Metoden ska returnera alla
+ egenskaper (properties) som djuret har.
+ 2. Skriv enoverride för Stats() i subklasserna för Animal så den returnerar alla
+ properties för det djuret.
+ 3. Skapa en lista Animals i Program.cs som tar emot djur.
+ 4. Skapa några djur (av olika typ) i din lista.
+ 5. Skriv ut vilka djur som finns i listan med hjälp av en foreach-loop
+ 6. Anropa ävenAnimals Sound() metod i foreach-loopen.
+ 7. Gör en check i for-loopen ifall ett djur även är av typen IPerson, om den är det
+ type-casta till IPerson och anropa dess Talk() metod.
+ 8. Skapa en lista för hundar.
+ 9. F:Försök att lägga till en häst i listan av hundar. Varför fungerar inte det?
+ 10. F: Vilken typ måste listan vara för att alla klasser skall kunna lagras tillsammans?
+ 11. Skriv ut samtliga Animals Stats() genom en foreachloop.
+ 12. Testa och se så det fungerar.
+ 13. F: Förklara vad det är som händer.
+ 14. Skriv ut Stats() metoden enbart för alla hundar genomen foreach på
+ Animals.
+ 15. Skapa en ny metod med valfritt namn  i klassen Dog som endast returnerar en valfri
+ sträng.
+ 16. Kommer du åt den metoden frånAnimals listan?
+ 17. F: Varför inte?
+ 18. Hitta ett sätt att skriva ut din nya metod för dog genom en foreach på Animals.
