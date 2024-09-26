@@ -4,9 +4,12 @@ C# Övningssamling - Inkapsling, arv och polymorfism
  3.1) Inkapsling
  1. Skapa en klassPersonoch ge den följande privata fält:
  age, fName, lName, height, weight
+
  Skapa publika properties med get och set som hämtar eller sätter tilldelad variabel.
  Instansiera en person i Program.cs, kommer du direkt åt variablerna?
+ 
  Implementera validering i de skapade properties:
+ 
  ● Age kan bara tilldelas ett värde större än 0.
 
  ● FName är obligatorisk och får inte vara mindre än 2 tecken eller längre än 10
