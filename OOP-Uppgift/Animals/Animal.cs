@@ -30,13 +30,15 @@ namespace OOP_Uppgift.Animals
 
         public int Age { get { return age; } set { age = value; } }
 
-        public abstract void DoSound();
-
         protected Animal(string name, int weight, int age)
         {
             Name = name;
             Weight = weight;
             Age = age;
         }
+        public abstract void DoSound();
+
+        public string Stats() { return name; }
+      
     }
 }
